@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+
+# Specific crawlers
+User-agent: Googlebot
+Allow: /
+Disallow: /admin
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin
+
+# Sitemaps
+Sitemap: https://italiano.example.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1

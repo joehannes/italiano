@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import MenuGrid from '../components/MenuGrid'
 import Testimonials from '../components/Testimonials'
+import SEO from '../components/SEO'
 import { fetchMenuData, fetchTestimonials, MenuData, TestimonialsData } from '../lib/jsonbin'
 
 const Home: FC = () => {
@@ -33,6 +34,11 @@ const Home: FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-[var(--color-light)]">
+      <SEO
+        title="Ristorante Italiano - Authentic Italian Food in Bávaro, Punta Cana"
+        description="Fresh, homemade Italian cuisine delivered to your door. Order on WhatsApp for fastest delivery. Authentic Italian dishes since 2024."
+        url="https://italiano.example.com/"
+      />
       <Header language={language} onLanguageChange={setLanguage} />
       <Hero language={language} />
       <main className="flex-grow">

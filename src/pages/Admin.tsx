@@ -5,6 +5,7 @@ import AdminAuth from '../components/AdminAuth'
 import MenuEditor from '../components/MenuEditor'
 import DeliveryEditor from '../components/DeliveryEditor'
 import TestimonialEditor from '../components/TestimonialEditor'
+import SEO from '../components/SEO'
 import { fetchMenuData, fetchDeliverySettings, fetchTestimonials, MenuData, DeliverySettings, TestimonialsData } from '../lib/jsonbin'
 
 const Admin: FC = () => {
@@ -53,6 +54,11 @@ const Admin: FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-[var(--color-light)]">
+      <SEO
+        title="Admin Panel - Ristorante Italiano"
+        description="Administrator dashboard for managing menu, delivery settings, and testimonials."
+        url="https://italiano.example.com/admin"
+      />
       <Header language={language} onLanguageChange={setLanguage} />
 
       <main className="flex-grow py-12">
