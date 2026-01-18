@@ -1,0 +1,302 @@
+{
+  "categories": [
+    {
+      "id": "pizza",
+      "label": { "en": "Pizza", "es": "Pizza" },
+      "items": [
+        {
+          "id": "margherita",
+          "name": { "en": "Margherita", "es": "Margarita" },
+          "description": { "en": "Fresh mozzarella, tomato, basil", "es": "Mozzarella fresca, tomate, albahaca" },
+          "price": 590,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-pizza",
+          "available": true
+        },
+        {
+          "id": "pepperoni",
+          "name": { "en": "Pepperoni", "es": "Pepperoni" },
+          "description": { "en": "Mozzarella, tomato sauce, pepperoni", "es": "Mozzarella, salsa de tomate, pepperoni" },
+          "price": 650,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-pizza",
+          "available": true
+        },
+        {
+          "id": "quattro_formaggi",
+          "name": { "en": "Quattro Formaggi", "es": "Cuatro Quesos" },
+          "description": { "en": "Mozzarella, parmesan, gorgonzola, ricotta", "es": "Mozzarella, parmesano, gorgonzola, ricota" },
+          "price": 720,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-pizza",
+          "available": true
+        },
+        {
+          "id": "prosciutto_arugula",
+          "name": { "en": "Prosciutto & Arugula", "es": "Prosciutto & Rúcula" },
+          "description": { "en": "Mozzarella, prosciutto, fresh arugula, parmesan", "es": "Mozzarella, prosciutto, rúcula fresca, parmesano" },
+          "price": 750,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-pizza",
+          "available": true
+        },
+        {
+          "id": "lasagna_pizza",
+          "name": { "en": "Lasagna Pizza", "es": "Pizza Lasaña" },
+          "description": { "en": "Layered pasta, bolognese sauce, mozzarella, béchamel", "es": "Pasta en capas, salsa boloñesa, mozzarella, salsa blanca" },
+          "price": 800,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-pizza",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "pasta",
+      "label": { "en": "Pasta", "es": "Pasta" },
+      "items": [
+        {
+          "id": "carbonara",
+          "name": { "en": "Spaghetti Carbonara", "es": "Espagueti Carbonara" },
+          "description": { "en": "Eggs, guanciale, pecorino, black pepper", "es": "Huevos, guanciale, queso de oveja, pimienta negra" },
+          "price": 580,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-pasta",
+          "available": true
+        },
+        {
+          "id": "bolognese",
+          "name": { "en": "Spaghetti Bolognese", "es": "Espagueti a la Boloñesa" },
+          "description": { "en": "Ground beef ragù, tomato sauce, parmesan", "es": "Ragú de res molida, salsa de tomate, parmesano" },
+          "price": 560,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-pasta",
+          "available": true
+        },
+        {
+          "id": "pesto",
+          "name": { "en": "Penne al Pesto", "es": "Penne al Pesto" },
+          "description": { "en": "Fresh basil pesto, pine nuts, garlic, parmesan", "es": "Pesto fresco de albahaca, piñones, ajo, parmesano" },
+          "price": 600,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-pasta",
+          "available": true
+        },
+        {
+          "id": "alfredo",
+          "name": { "en": "Fettuccine Alfredo", "es": "Fettuccine Alfredo" },
+          "description": { "en": "Butter, cream, parmesan sauce", "es": "Salsa de mantequilla, crema y parmesano" },
+          "price": 620,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-pasta",
+          "available": true
+        },
+        {
+          "id": "seafood_pasta",
+          "name": { "en": "Spaghetti ai Frutti di Mare", "es": "Espagueti Marinero" },
+          "description": { "en": "Shrimp, mussels, clams, garlic, white wine", "es": "Camarones, mejillones, almejas, ajo, vino blanco" },
+          "price": 850,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-pasta",
+          "available": true
+        },
+        {
+          "id": "ravioli_ricotta",
+          "name": { "en": "Ravioli di Ricotta", "es": "Ravioli de Ricota" },
+          "description": { "en": "Spinach & ricotta filled ravioli, butter sage sauce", "es": "Ravioli relleno de espinaca y ricota, salsa de mantequilla y salvia" },
+          "price": 680,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-pasta",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "risotto",
+      "label": { "en": "Risotto", "es": "Risotto" },
+      "items": [
+        {
+          "id": "risotto_milanese",
+          "name": { "en": "Risotto alla Milanese", "es": "Risotto a la Milanesa" },
+          "description": { "en": "Arborio rice, saffron, beef broth, butter, parmesan", "es": "Arroz Arborio, azafrán, caldo de res, mantequilla, parmesano" },
+          "price": 700,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-risotto",
+          "available": true
+        },
+        {
+          "id": "risotto_seafood",
+          "name": { "en": "Risotto ai Frutti di Mare", "es": "Risotto Marinero" },
+          "description": { "en": "Arborio rice, seafood, white wine, saffron", "es": "Arroz Arborio, mariscos, vino blanco, azafrán" },
+          "price": 880,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-risotto",
+          "available": true
+        },
+        {
+          "id": "risotto_mushroom",
+          "name": { "en": "Risotto ai Funghi", "es": "Risotto de Champiñones" },
+          "description": { "en": "Arborio rice, mixed mushrooms, truffle oil, parmesan", "es": "Arroz Arborio, champiñones variados, aceite de trufa, parmesano" },
+          "price": 750,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-risotto",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "meat",
+      "label": { "en": "Main Courses", "es": "Platos Principales" },
+      "items": [
+        {
+          "id": "osso_buco",
+          "name": { "en": "Osso Buco", "es": "Osso Buco" },
+          "description": { "en": "Braised veal shank, tomato sauce, served with risotto", "es": "Chamorro de ternera guisado, salsa de tomate, servido con risotto" },
+          "price": 1200,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-meat",
+          "available": true
+        },
+        {
+          "id": "chicken_parmigiana",
+          "name": { "en": "Chicken Parmigiana", "es": "Pollo a la Parmesana" },
+          "description": { "en": "Breaded chicken, mozzarella, parmesan, tomato sauce", "es": "Pollo empanizado, mozzarella, parmesano, salsa de tomate" },
+          "price": 720,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-meat",
+          "available": true
+        },
+        {
+          "id": "veal_piccata",
+          "name": { "en": "Veal Piccata", "es": "Ternera Piccata" },
+          "description": { "en": "Thin veal slices, lemon, capers, white wine sauce", "es": "Finas láminas de ternera, limón, alcaparras, salsa de vino blanco" },
+          "price": 950,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-meat",
+          "available": true
+        },
+        {
+          "id": "branzino",
+          "name": { "en": "Branzino al Forno", "es": "Lubina al Horno" },
+          "description": { "en": "Whole sea bass, olive oil, herbs, roasted potatoes", "es": "Lubina entera, aceite de oliva, hierbas, papas asadas" },
+          "price": 1100,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-meat",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "appetizers",
+      "label": { "en": "Appetizers", "es": "Entradas" },
+      "items": [
+        {
+          "id": "bruschetta",
+          "name": { "en": "Bruschetta al Pomodoro", "es": "Bruschettas de Tomate" },
+          "description": { "en": "Toasted bread, fresh tomatoes, garlic, basil, olive oil", "es": "Pan tostado, tomates frescos, ajo, albahaca, aceite de oliva" },
+          "price": 350,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-appetizer",
+          "available": true
+        },
+        {
+          "id": "caprese",
+          "name": { "en": "Caprese Salad", "es": "Ensalada Caprese" },
+          "description": { "en": "Fresh mozzarella, tomatoes, basil, olive oil, balsamic", "es": "Mozzarella fresca, tomates, albahaca, aceite de oliva, balsámico" },
+          "price": 420,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-appetizer",
+          "available": true
+        },
+        {
+          "id": "arancini",
+          "name": { "en": "Arancini", "es": "Arancini" },
+          "description": { "en": "Golden fried risotto balls, ragù, mozzarella, marinara sauce", "es": "Bolitas de risotto fritas, ragú, mozzarella, salsa marinara" },
+          "price": 480,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-appetizer",
+          "available": true
+        },
+        {
+          "id": "calamari_fritti",
+          "name": { "en": "Calamari Fritti", "es": "Calamares Fritos" },
+          "description": { "en": "Crispy fried squid rings, marinara dipping sauce", "es": "Anillas de calamar crujientes, salsa marinara" },
+          "price": 520,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-appetizer",
+          "available": true
+        },
+        {
+          "id": "mozzarella_sticks",
+          "name": { "en": "Mozzarella Sticks", "es": "Bastones de Mozzarella" },
+          "description": { "en": "Fried mozzarella, marinara sauce", "es": "Mozzarella frita, salsa marinara" },
+          "price": 380,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-appetizer",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "label": { "en": "Desserts", "es": "Postres" },
+      "items": [
+        {
+          "id": "tiramisu",
+          "name": { "en": "Tiramisu", "es": "Tiramisú" },
+          "description": { "en": "Ladyfinger cookies, mascarpone, coffee, cocoa", "es": "Galletas savoiardi, mascarpone, café, cacao" },
+          "price": 320,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-dessert",
+          "available": true
+        },
+        {
+          "id": "panna_cotta",
+          "name": { "en": "Panna Cotta", "es": "Panna Cotta" },
+          "description": { "en": "Silky cream custard, berry coulis", "es": "Crema suave, salsa de bayas" },
+          "price": 300,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-dessert",
+          "available": true
+        },
+        {
+          "id": "panna_cotta_pistachio",
+          "name": { "en": "Panna Cotta Pistachio", "es": "Panna Cotta de Pistacho" },
+          "description": { "en": "Pistachio cream custard, chocolate crumble", "es": "Crema de pistacho, migas de chocolate" },
+          "price": 350,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-dessert",
+          "available": true
+        },
+        {
+          "id": "panna_cotta_vanilla",
+          "name": { "en": "Panna Cotta Vanilla", "es": "Panna Cotta de Vainilla" },
+          "description": { "en": "Madagascar vanilla cream custard, caramel drizzle", "es": "Crema de vainilla de Madagascar, caramelo" },
+          "price": 320,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-dessert",
+          "available": true
+        },
+        {
+          "id": "gelato",
+          "name": { "en": "Gelato", "es": "Gelato" },
+          "description": { "en": "Italian ice cream - ask about flavors", "es": "Helado italiano - consulte los sabores" },
+          "price": 280,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-dessert",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "beverages",
+      "label": { "en": "Beverages", "es": "Bebidas" },
+      "items": [
+        {
+          "id": "italian_soda",
+          "name": { "en": "Italian Soda", "es": "Refresco Italiano" },
+          "description": { "en": "Sparkling water with fruit syrup and cream", "es": "Agua con gas, jarabe de frutas y crema" },
+          "price": 180,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-beverage",
+          "available": true
+        },
+        {
+          "id": "espresso",
+          "name": { "en": "Espresso", "es": "Espresso" },
+          "description": { "en": "Strong Italian coffee", "es": "Café italiano fuerte" },
+          "price": 120,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-beverage",
+          "available": true
+        },
+        {
+          "id": "cappuccino",
+          "name": { "en": "Cappuccino", "es": "Capuchino" },
+          "description": { "en": "Espresso with steamed milk and foam", "es": "Espresso con leche al vapor y espuma" },
+          "price": 180,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-beverage",
+          "available": true
+        },
+        {
+          "id": "limoncello",
+          "name": { "en": "Limoncello Shot", "es": "Chupito de Limoncello" },
+          "description": { "en": "Traditional Italian lemon liqueur", "es": "Licor de limón italiano tradicional" },
+          "price": 150,
+          "image": "https://res.cloudinary.com/dkxlhxpe4/image/upload/v1/placeholder-beverage",
+          "available": true
+        }
+      ]
+    }
+  ]
+}

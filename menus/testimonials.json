@@ -1,0 +1,36 @@
+{
+  "testimonials": [
+    {
+      "name": "John D.",
+      "source": "WhatsApp",
+      "language": "en",
+      "message": "Best Italian food we had in Punta Cana!",
+      "approved": true,
+      "date": "2026-01-15"
+    },
+    {
+      "name": "María G.",
+      "source": "WhatsApp",
+      "language": "es",
+      "message": "¡La mejor comida italiana que hemos probado en Punta Cana! Muy fresco y delicioso.",
+      "approved": true,
+      "date": "2026-01-16"
+    },
+    {
+      "name": "Sophie L.",
+      "source": "WhatsApp",
+      "language": "en",
+      "message": "Fantastic quality and super fast delivery. Highly recommend!",
+      "approved": true,
+      "date": "2026-01-17"
+    },
+    {
+      "name": "Carlos M.",
+      "source": "WhatsApp",
+      "language": "es",
+      "message": "Excelente servicio y comida auténtica. ¡Pedimos cada semana!",
+      "approved": true,
+      "date": "2026-01-18"
+    }
+  ]
+}
