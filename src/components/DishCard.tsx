@@ -15,27 +15,30 @@ const DishCard: FC<DishCardProps> = ({ item, language }) => {
   const orderText = `I'd like to order ${name} (${price} DOP)`
 
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
       {item.image && (
         <img
           src={item.image}
           alt={name}
           className="w-full h-48 object-cover"
+          loading="lazy"
         />
       )}
-      <div className="p-4">
-        <h3 className="text-xl font-serif font-bold text-[var(--color-primary)] mb-2">
+      <div className="p-4 flex flex-col flex-grow">
+        <h3 className="text-lg sm:text-xl font-serif font-bold text-[var(--color-primary)] mb-2">
           {name}
         </h3>
-        <p className="text-gray-600 text-sm mb-4">{description}</p>
-        <div className="flex justify-between items-center">
+        <p className="text-gray-600 text-sm mb-4 flex-grow">{description}</p>
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
           <span className="text-2xl font-bold text-[var(--color-accent)]">
             {price} DOP
           </span>
           {item.available ? (
-            <WhatsAppCTA text={orderText} />
+            <div className="w-full sm:w-auto">
+              <WhatsAppCTA text={orderText} />
+            </div>
           ) : (
-            <button disabled className="bg-gray-300 text-gray-500 font-semibold py-2 px-4 rounded-lg cursor-not-allowed">
+            <button disabled className="w-full sm:w-auto bg-gray-300 text-gray-500 font-semibold py-2 px-4 rounded-lg cursor-not-allowed">
               {language === 'en' ? 'Unavailable' : 'No disponible'}
             </button>
           )}
