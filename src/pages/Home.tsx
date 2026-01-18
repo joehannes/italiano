@@ -3,7 +3,8 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import MenuGrid from '../components/MenuGrid'
-import { fetchMenuData, MenuData } from '../lib/jsonbin'
+import Testimonials from '../components/Testimonials'
+import { fetchMenuData, fetchTestimonials, MenuData, TestimonialsData } from '../lib/jsonbin'
 
 const Home: FC = () => {
   const [language, setLanguage] = useState<'en' | 'es'>(() => {
@@ -12,6 +13,7 @@ const Home: FC = () => {
   })
 
   const [menuData, setMenuData] = useState<MenuData | null>(null)
+  const [testimonialsData, setTestimonialsData] = useState<TestimonialsData | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -19,12 +21,14 @@ const Home: FC = () => {
   }, [language])
 
   useEffect(() => {
-    const loadMenu = async () => {
-      const data = await fetchMenuData()
-      setMenuData(data)
+    const loadData = async () => {
+      const menu = await fetchMenuData()
+      const testimonials = await fetchTestimonials()
+      setMenuData(menu)
+      setTestimonialsData(testimonials)
       setLoading(false)
     }
-    loadMenu()
+    loadData()
   }, [])
 
   return (
@@ -66,6 +70,10 @@ const Home: FC = () => {
             )}
           </div>
         </section>
+
+        {testimonialsData && (
+          <Testimonials testimonials={testimonialsData.testimonials} language={language} />
+        )}
       </main>
       <Footer language={language} />
     </div>

@@ -4,7 +4,8 @@ import Footer from '../components/Footer'
 import AdminAuth from '../components/AdminAuth'
 import MenuEditor from '../components/MenuEditor'
 import DeliveryEditor from '../components/DeliveryEditor'
-import { fetchMenuData, fetchDeliverySettings, MenuData, DeliverySettings } from '../lib/jsonbin'
+import TestimonialEditor from '../components/TestimonialEditor'
+import { fetchMenuData, fetchDeliverySettings, fetchTestimonials, MenuData, DeliverySettings, TestimonialsData } from '../lib/jsonbin'
 
 const Admin: FC = () => {
   const [language, setLanguage] = useState<'en' | 'es'>(() => {
@@ -18,7 +19,8 @@ const Admin: FC = () => {
 
   const [menuData, setMenuData] = useState<MenuData | null>(null)
   const [deliverySettings, setDeliverySettings] = useState<DeliverySettings | null>(null)
-  const [activeTab, setActiveTab] = useState<'menu' | 'delivery'>('menu')
+  const [testimonialsData, setTestimonialsData] = useState<TestimonialsData | null>(null)
+  const [activeTab, setActiveTab] = useState<'menu' | 'delivery' | 'testimonials'>('menu')
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -30,8 +32,10 @@ const Admin: FC = () => {
       const loadData = async () => {
         const menu = await fetchMenuData()
         const delivery = await fetchDeliverySettings()
+        const testimonials = await fetchTestimonials()
         setMenuData(menu)
         setDeliverySettings(delivery)
+        setTestimonialsData(testimonials)
         setLoading(false)
       }
       loadData()
@@ -66,10 +70,10 @@ const Admin: FC = () => {
           </div>
 
           {/* Tabs */}
-          <div className="flex gap-4 mb-6">
+          <div className="flex gap-4 mb-6 overflow-x-auto">
             <button
               onClick={() => setActiveTab('menu')}
-              className={`px-6 py-2 rounded-lg font-semibold transition-colors ${
+              className={`px-6 py-2 rounded-lg font-semibold transition-colors whitespace-nowrap ${
                 activeTab === 'menu'
                   ? 'bg-[var(--color-primary)] text-white'
                   : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
@@ -79,13 +83,23 @@ const Admin: FC = () => {
             </button>
             <button
               onClick={() => setActiveTab('delivery')}
-              className={`px-6 py-2 rounded-lg font-semibold transition-colors ${
+              className={`px-6 py-2 rounded-lg font-semibold transition-colors whitespace-nowrap ${
                 activeTab === 'delivery'
                   ? 'bg-[var(--color-primary)] text-white'
                   : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
               }`}
             >
-              {language === 'en' ? 'Delivery Settings' : 'Configuración de Entrega'}
+              {language === 'en' ? 'Delivery' : 'Entrega'}
+            </button>
+            <button
+              onClick={() => setActiveTab('testimonials')}
+              className={`px-6 py-2 rounded-lg font-semibold transition-colors whitespace-nowrap ${
+                activeTab === 'testimonials'
+                  ? 'bg-[var(--color-primary)] text-white'
+                  : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
+              }`}
+            >
+              {language === 'en' ? 'Testimonials' : 'Testimonios'}
             </button>
           </div>
 
@@ -102,6 +116,9 @@ const Admin: FC = () => {
               )}
               {activeTab === 'delivery' && deliverySettings && (
                 <DeliveryEditor settings={deliverySettings} language={language} onSave={setDeliverySettings} />
+              )}
+              {activeTab === 'testimonials' && testimonialsData && (
+                <TestimonialEditor data={testimonialsData} language={language} onSave={setTestimonialsData} />
               )}
             </>
           )}
