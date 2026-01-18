@@ -1,5 +1,7 @@
-const JSONBIN_API_KEY = '$2a$10$O.OU0pIRgV/JRXJt3aTLW.W/.wgF3ISPaTXWVGaSS9QQ3EpRuJw1a'
-const JSONBIN_BIN_ID = 'italiano_menu' // Will be created on first save
+const JSONBIN_API_KEY = '$2a$10$AQDUTc98/a7VZDst9abOVeGzfRB4uKCW/xlo0Ow7T7PAdQFmDkdfW'
+const JSONBIN_MENU_ID = '696d181a43b1c97be9391b5b'
+const JSONBIN_TESTIMONIALS_ID = '696d181c43b1c97be9391b64'
+const JSONBIN_DELIVERY_ID = '696d181fae596e708fe4f0ec'
 
 export interface MenuItem {
   id: string
@@ -86,7 +88,7 @@ const DEFAULT_TESTIMONIALS: TestimonialsData = {
 // Fetch from JSONBin
 export async function fetchMenuData(): Promise<MenuData> {
   try {
-    const response = await fetch('https://api.jsonbin.io/v3/b/italiano_menu', {
+    const response = await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_MENU_ID}`, {
       headers: {
         'X-Master-Key': JSONBIN_API_KEY,
       },
@@ -103,7 +105,7 @@ export async function fetchMenuData(): Promise<MenuData> {
 
 export async function fetchDeliverySettings(): Promise<DeliverySettings> {
   try {
-    const response = await fetch('https://api.jsonbin.io/v3/b/italiano_delivery', {
+    const response = await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_DELIVERY_ID}`, {
       headers: {
         'X-Master-Key': JSONBIN_API_KEY,
       },
@@ -120,7 +122,7 @@ export async function fetchDeliverySettings(): Promise<DeliverySettings> {
 
 export async function fetchTestimonials(): Promise<TestimonialsData> {
   try {
-    const response = await fetch('https://api.jsonbin.io/v3/b/italiano_testimonials', {
+    const response = await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_TESTIMONIALS_ID}`, {
       headers: {
         'X-Master-Key': JSONBIN_API_KEY,
       },
@@ -136,7 +138,7 @@ export async function fetchTestimonials(): Promise<TestimonialsData> {
 }
 
 // Save to JSONBin
-export async function saveMenuData(data: MenuData, binId = 'italiano_menu'): Promise<boolean> {
+export async function saveMenuData(data: MenuData, binId = JSONBIN_MENU_ID): Promise<boolean> {
   try {
     const response = await fetch(`https://api.jsonbin.io/v3/b/${binId}`, {
       method: 'PUT',
@@ -155,7 +157,7 @@ export async function saveMenuData(data: MenuData, binId = 'italiano_menu'): Pro
 
 export async function saveDeliverySettings(
   data: DeliverySettings,
-  binId = 'italiano_delivery'
+  binId = JSONBIN_DELIVERY_ID
 ): Promise<boolean> {
   try {
     const response = await fetch(`https://api.jsonbin.io/v3/b/${binId}`, {
@@ -175,7 +177,7 @@ export async function saveDeliverySettings(
 
 export async function saveTestimonials(
   data: TestimonialsData,
-  binId = 'italiano_testimonials'
+  binId = JSONBIN_TESTIMONIALS_ID
 ): Promise<boolean> {
   try {
     const response = await fetch(`https://api.jsonbin.io/v3/b/${binId}`, {
