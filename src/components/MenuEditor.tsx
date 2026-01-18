@@ -1,5 +1,6 @@
 import { FC, useState, useEffect } from 'react'
 import { MenuData, MenuItem, MenuCategory, saveMenuData } from '../lib/jsonbin'
+import ImageUploader from './ImageUploader'
 
 interface MenuEditorProps {
   menuData: MenuData
@@ -110,6 +111,10 @@ const MenuEditor: FC<MenuEditorProps> = ({ menuData, language, onSave }) => {
     }))
   }
 
+  const handleImageUpload = (categoryId: string, itemId: string, imageUrl: string) => {
+    updateItemField(categoryId, itemId, 'image', imageUrl)
+  }
+
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
@@ -193,18 +198,15 @@ const MenuEditor: FC<MenuEditorProps> = ({ menuData, language, onSave }) => {
                         className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
                     </div>
-                    <div>
-                      <label className="block text-sm font-semibold mb-1">Image URL</label>
-                      <input
-                        type="text"
-                        value={item.image}
-                        onChange={(e) =>
-                          updateItemField(category.id, item.id, 'image', e.target.value)
-                        }
-                        className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      />
-                    </div>
                   </div>
+
+                  <div className="mt-4 bg-white p-3 rounded border border-gray-300">
+                    <ImageUploader
+                      currentImage={item.image}
+                      onImageUploaded={(url) => handleImageUpload(category.id, item.id, url)}
+                    />
+                  </div>
+
                   <div className="mt-4 flex items-center gap-4">
                     <label className="flex items-center gap-2">
                       <input
